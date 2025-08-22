@@ -2,7 +2,7 @@
 
 
 
-import {loadGLTF} from "../../libs/loader.js";
+import {loadGLTF} from "./libs/loader.js";
 // import {mockWithVideo} from '../../libs/camera-mock.js';
 const THREE = window.MINDAR.FACE.THREE;
 
@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const light = new THREE.HemisphereLight(0xffffff, 0xbbbbff, 1);
     scene.add(light);
 
-    const model = await loadGLTF('../../../GLASSES/GLASSES4/glasses.glb');
+    const model = await loadGLTF('./GLASSES/GLASSES4/glasses.glb');
 
     // --- ساخت یک Rig تا تغییرات را از مدل اصلی جدا کنیم
     const rig = new THREE.Group();

@@ -1,4 +1,4 @@
-import {loadGLTF} from "../../libs/loader.js";
+import {loadGLTF} from "./libs/loader.js";
 //import {mockWithVideo} from '../../libs/camera-mock.js';
 const THREE = window.MINDAR.FACE.THREE;
 
@@ -28,13 +28,13 @@ document.addEventListener('DOMContentLoaded', () => {
     scene.add(light);
 
     
-    const glasses1 = await loadGLTF('../../GLASSES/GLASSES1/glasses.glb');
+    const glasses1 = await loadGLTF('./GLASSES/GLASSES1/glasses.glb');
     glasses1.scene.scale.set(0.08866535105013076, 0.08866535105013076, 0.08866535105013076);
     glasses1.scene.position.set(0.02999999999999999, -0.4275000000000003, -2.4024999999999);
     glasses1.scene.rotation.set(0, -90.49999999999969 * Math.PI / 180, 0);
    
     
-     const glasses4 = await loadGLTF('../../GLASSES/GLASSES4/glasses.glb');
+     const glasses4 = await loadGLTF('./GLASSES/GLASSES4/glasses.glb');
     glasses4.scene.scale.set(0.22290916391346535, 0.22290916391346535, 0.22290916391346535);
     glasses4.scene.position.set(0.004999999999999994, -0.22500000000000014, -2.0924999999998852);
     glasses4.scene.rotation.set(1.987846675914698e-16, -0.4999999999999927 * Math.PI / 180, 0);
